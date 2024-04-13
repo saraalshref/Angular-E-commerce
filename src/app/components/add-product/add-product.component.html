@@ -1,0 +1,73 @@
+<div class="container mt-5">
+
+    <div class="row">
+        <div class="col-6">
+
+            <form (submit)="addProduct()" #addPrdForm="ngForm">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name :</label>
+                    <input type="text" class="form-control" 
+                    [(ngModel)]="product.name"
+                    name="name"
+                    required
+                    pattern="^[a-zA-Z]{3,20}$"
+                     #prdName="ngModel">
+
+                 @if(prdName.touched&&prdName.invalid){
+                    <div class="text-danger">
+                        @if(prdName.errors?.['required']){
+                            <p>Name is Required</p>
+                        }
+
+                        @if(prdName.errors?.['pattern']){
+                            <p>Name must be at least 3 characters</p>
+
+                        }
+                       
+                    </div>
+                 }
+                   
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Price :</label>
+                    <input type="number" class="form-control"
+                    [(ngModel)]="product.price"
+                    name="price"
+                    id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Quantity :</label>
+                    <input type="number" class="form-control"
+                    [(ngModel)]="product.quantity"
+                    name="quantity"
+                    id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Image :</label>
+                    <input type="file"
+                    [(ngModel)]="product.imgUrl"
+                    name="imgUrl"
+                     class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Category</label>
+                    <select class="form-select form-select-lg" [(ngModel)]="product.catId"
+                     name="catId" id="">
+                        @for(cat of categories;track cat.id){
+                            <option [value]="cat.id">{{cat.name}}</option>
+                        }
+                       
+                        
+
+                    </select>
+                </div>
+
+
+
+                <button type="submit" [disabled]="addPrdForm.invalid" class="btn btn-success mb-5">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Samsung Galaxy A14",
+      "price": 50000,
+      "quantity": 10,
+      "catId": 1,
+      "imgUrl": "assets/images/p1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Apple iPhone 11",
+      "price": 13000,
+      "quantity": 20,
+      "catId": 1,
+      "imgUrl": "assets/images/p2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Iphone 13",
+      "price": 40000,
+      "quantity": 10,
+      "catId": 1,
+      "imgUrl": "assets/images/p3.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Samsung Galaxy A24",
+      "price": 13000,
+      "quantity": 20,
+      "catId": 1,
+      "imgUrl": "assets/images/p4.jpg"
+    },
+    {
+      "id": "4",
+      "name": "HP Victus 15-fb0033ne Laptop",
+      "price": 25000,
+      "quantity": 10,
+      "catId": 2,
+      "imgUrl": "assets/images/l1.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Dell Inspiron G15-5511 Laptop",
+      "price": 30000,
+      "quantity": 10,
+      "catId": 2,
+      "imgUrl": "assets/images/l2.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Dell Latitude 5430 XCTO Laptop",
+      "price": 50000,
+      "quantity": 20,
+      "catId": 2,
+      "imgUrl": "assets/images/l3.jpg"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Mobiles"
+    },
+    {
+      "id": "2",
+      "name": "Laptops"
+    }
+  ]
+}

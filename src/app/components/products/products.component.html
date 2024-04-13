@@ -1,0 +1,16 @@
+<div class="row row-cols-1 row-cols-md-4 g-4 m-4">
+    <ng-container *ngFor="let prd of filteredProducts;let i=index;let c=count;trackBy: trackProducts">
+        <div class="col">
+            <div class="card h-100" appBorderShadow="white" backlColor="rgb(148, 188, 148)">
+                <img [src]="prd.imgUrl" class="card-img-top h-75" alt="...">
+                <div class="card-body mt-5">
+                    <h5 class="card-title">{{prd.name}}</h5>
+                    <p class="card-text">Price: {{ prd.price | currency:'EGP':'symbol' }}</p>
+                    <button class="btn btn-success me-2" (click)="navigateToDetails(prd.id)">Details</button>
+                    <button class="btn btn-success me-2" (click)="edit(prd.id)">Edit</button>
+                    <button class="btn btn-success" (click)="delete(prd.id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
